@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="مطعم سقطري - أصالة المطبخ اليمني السقطري في قلب باريس">
-    <title>مطعم سقطري - باريس</title>
+    <title>مطعم سقطري - باريس | Restaurant Soqotri Paris | Soqotri Restaurant Paris</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>مطعم سقطري</h1>
-                <p class="tagline">لؤلؤة المحيط الهندي</p>
+                <h1 data-i18n="nav.brand">مطعم سقطري</h1>
+                <p class="tagline" data-i18n="nav.tagline">لؤلؤة المحيط الهندي</p>
             </div>
             <button class="nav-toggle" id="navToggle">
                 <span></span>
@@ -24,11 +24,16 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
-                <li><a href="#about" class="nav-link">من نحن</a></li>
-                <li><a href="#menu" class="nav-link">القائمة</a></li>
-                <li><a href="#gallery" class="nav-link">معرض الصور</a></li>
-                <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+                <li><a href="#home" class="nav-link active" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">من نحن</a></li>
+                <li><a href="#menu" class="nav-link" data-i18n="nav.menu">القائمة</a></li>
+                <li><a href="#gallery" class="nav-link" data-i18n="nav.gallery">معرض الصور</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">اتصل بنا</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn" data-lang="ar">🇾🇪 العربية</button>
+                    <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                    <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -37,12 +42,12 @@
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">مطعم سقطري</h1>
-            <p class="hero-subtitle">اكتشف نكهات جزيرة سقطرى الأسطورية في قلب باريس</p>
-            <p class="hero-description">تجربة طهي فريدة تجمع بين الأصالة اليمنية والتراث السقطري العريق</p>
+            <h1 class="hero-title" data-i18n="hero.title">مطعم سقطري</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">اكتشف نكهات جزيرة سقطرى الأسطورية في قلب باريس</p>
+            <p class="hero-description" data-i18n="hero.description">تجربة طهي فريدة تجمع بين الأصالة اليمنية والتراث السقطري العريق</p>
             <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">استكشف القائمة</a>
-                <a href="#contact" class="btn btn-secondary">احجز طاولة</a>
+                <a href="#menu" class="btn btn-primary" data-i18n="hero.btn.menu">استكشف القائمة</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="hero.btn.book">احجز طاولة</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -54,35 +59,35 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2>عن مطعمنا</h2>
+                <h2 data-i18n="about.heading">عن مطعمنا</h2>
                 <div class="divider"></div>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>رحلة من سقطرى إلى باريس</h3>
-                    <p>
+                    <h3 data-i18n="about.title">رحلة من سقطرى إلى باريس</h3>
+                    <p data-i18n="about.text1">
                         نحن نقدم لكم تجربة طهي استثنائية تأخذكم في رحلة إلى جزيرة سقطرى،
                         جوهرة المحيط الهندي وموطن أقدم الحضارات وأغنى التقاليد الطهي.
                     </p>
-                    <p>
+                    <p data-i18n="about.text2">
                         في قلب باريس، نجلب لكم أصالة المطبخ السقطري بوصفاته التقليدية
                         وتوابله الفريدة التي توارثتها الأجيال، مع لمسة عصرية تناسب ذوقكم الرفيع.
                     </p>
                     <div class="features">
                         <div class="feature">
                             <span class="feature-icon">🌿</span>
-                            <h4>مكونات طبيعية</h4>
-                            <p>نستخدم أجود التوابل والأعشاب السقطرية النادرة</p>
+                            <h4 data-i18n="about.feature1.title">مكونات طبيعية</h4>
+                            <p data-i18n="about.feature1.desc">نستخدم أجود التوابل والأعشاب السقطرية النادرة</p>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">👨‍🍳</span>
-                            <h4>طهاة محترفون</h4>
-                            <p>فريق من الطهاة المتخصصين في المطبخ اليمني</p>
+                            <h4 data-i18n="about.feature2.title">طهاة محترفون</h4>
+                            <p data-i18n="about.feature2.desc">فريق من الطهاة المتخصصين في المطبخ اليمني</p>
                         </div>
                         <div class="feature">
                             <span class="feature-icon">🏝️</span>
-                            <h4>أجواء أصيلة</h4>
-                            <p>تصميم يعكس جمال وثقافة جزيرة سقطرى</p>
+                            <h4 data-i18n="about.feature3.title">أجواء أصيلة</h4>
+                            <p data-i18n="about.feature3.desc">تصميم يعكس جمال وثقافة جزيرة سقطرى</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +96,7 @@
                         <svg width="100%" height="100%" viewBox="0 0 400 500">
                             <rect width="400" height="500" fill="#2c5f2d"/>
                             <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="24" font-family="Cairo">
-                                صورة المطعم
+                                Restaurant Image
                             </text>
                         </svg>
                     </div>
@@ -104,162 +109,162 @@
     <section id="menu" class="menu">
         <div class="container">
             <div class="section-header">
-                <h2>قائمة الطعام</h2>
+                <h2 data-i18n="menu.heading">قائمة الطعام</h2>
                 <div class="divider"></div>
-                <p>تذوق أشهى الأطباق السقطرية واليمنية الأصيلة</p>
+                <p data-i18n="menu.subtitle">تذوق أشهى الأطباق السقطرية واليمنية الأصيلة</p>
             </div>
 
             <div class="menu-categories">
-                <button class="category-btn active" data-category="all">الكل</button>
-                <button class="category-btn" data-category="appetizers">المقبلات</button>
-                <button class="category-btn" data-category="main">الأطباق الرئيسية</button>
-                <button class="category-btn" data-category="seafood">المأكولات البحرية</button>
-                <button class="category-btn" data-category="desserts">الحلويات</button>
-                <button class="category-btn" data-category="drinks">المشروبات</button>
+                <button class="category-btn active" data-category="all" data-i18n="menu.cat.all">الكل</button>
+                <button class="category-btn" data-category="appetizers" data-i18n="menu.cat.appetizers">المقبلات</button>
+                <button class="category-btn" data-category="main" data-i18n="menu.cat.main">الأطباق الرئيسية</button>
+                <button class="category-btn" data-category="seafood" data-i18n="menu.cat.seafood">المأكولات البحرية</button>
+                <button class="category-btn" data-category="desserts" data-i18n="menu.cat.desserts">الحلويات</button>
+                <button class="category-btn" data-category="drinks" data-i18n="menu.cat.drinks">المشروبات</button>
             </div>
 
             <div class="menu-grid">
                 <!-- Appetizers -->
                 <div class="menu-item" data-category="appetizers">
                     <div class="menu-item-header">
-                        <h3>سلطة سقطرية</h3>
+                        <h3 data-i18n="menu.item1.name">سلطة سقطرية</h3>
                         <span class="price">€8</span>
                     </div>
-                    <p class="menu-item-description">سلطة طازجة بالأعشاب السقطرية النادرة والليمون السقطري</p>
+                    <p class="menu-item-description" data-i18n="menu.item1.desc">سلطة طازجة بالأعشاب السقطرية النادرة والليمون السقطري</p>
                 </div>
 
                 <div class="menu-item" data-category="appetizers">
                     <div class="menu-item-header">
-                        <h3>شوربة العدس اليمنية</h3>
+                        <h3 data-i18n="menu.item2.name">شوربة العدس اليمنية</h3>
                         <span class="price">€7</span>
                     </div>
-                    <p class="menu-item-description">شوربة عدس تقليدية بالتوابل اليمنية الخاصة</p>
+                    <p class="menu-item-description" data-i18n="menu.item2.desc">شوربة عدس تقليدية بالتوابل اليمنية الخاصة</p>
                 </div>
 
                 <div class="menu-item" data-category="appetizers">
                     <div class="menu-item-header">
-                        <h3>سمبوسة باللحم</h3>
+                        <h3 data-i18n="menu.item3.name">سمبوسة باللحم</h3>
                         <span class="price">€9</span>
                     </div>
-                    <p class="menu-item-description">سمبوسة مقرمشة محشية باللحم المتبل والبصل</p>
+                    <p class="menu-item-description" data-i18n="menu.item3.desc">سمبوسة مقرمشة محشية باللحم المتبل والبصل</p>
                 </div>
 
                 <!-- Main Dishes -->
                 <div class="menu-item" data-category="main">
                     <div class="menu-item-header">
-                        <h3>مندي لحم سقطري</h3>
+                        <h3 data-i18n="menu.item4.name">مندي لحم سقطري</h3>
                         <span class="price">€24</span>
                     </div>
-                    <p class="menu-item-description">لحم غنم طري مطهو بطريقة تقليدية مع أرز بسمتي وتوابل سقطرية</p>
-                    <span class="badge">الأكثر طلباً</span>
+                    <p class="menu-item-description" data-i18n="menu.item4.desc">لحم غنم طري مطهو بطريقة تقليدية مع أرز بسمتي وتوابل سقطرية</p>
+                    <span class="badge" data-i18n="menu.badge.popular">الأكثر طلباً</span>
                 </div>
 
                 <div class="menu-item" data-category="main">
                     <div class="menu-item-header">
-                        <h3>زربيان دجاج</h3>
+                        <h3 data-i18n="menu.item5.name">زربيان دجاج</h3>
                         <span class="price">€20</span>
                     </div>
-                    <p class="menu-item-description">دجاج طري مع أرز زربيان بالزعفران والتوابل الخاصة</p>
+                    <p class="menu-item-description" data-i18n="menu.item5.desc">دجاج طري مع أرز زربيان بالزعفران والتوابل الخاصة</p>
                 </div>
 
                 <div class="menu-item" data-category="main">
                     <div class="menu-item-header">
-                        <h3>سلتة يمنية</h3>
+                        <h3 data-i18n="menu.item6.name">سلتة يمنية</h3>
                         <span class="price">€18</span>
                     </div>
-                    <p class="menu-item-description">طبق يمني تقليدي ساخن بالخضار واللحم والحلبة</p>
+                    <p class="menu-item-description" data-i18n="menu.item6.desc">طبق يمني تقليدي ساخن بالخضار واللحم والحلبة</p>
                 </div>
 
                 <div class="menu-item" data-category="main">
                     <div class="menu-item-header">
-                        <h3>حنيذ لحم</h3>
+                        <h3 data-i18n="menu.item7.name">حنيذ لحم</h3>
                         <span class="price">€26</span>
                     </div>
-                    <p class="menu-item-description">لحم مطهو ببطء في فرن تقليدي حتى يذوب في الفم</p>
+                    <p class="menu-item-description" data-i18n="menu.item7.desc">لحم مطهو ببطء في فرن تقليدي حتى يذوب في الفم</p>
                 </div>
 
                 <!-- Seafood -->
                 <div class="menu-item" data-category="seafood">
                     <div class="menu-item-header">
-                        <h3>سمك سقطري مشوي</h3>
+                        <h3 data-i18n="menu.item8.name">سمك سقطري مشوي</h3>
                         <span class="price">€28</span>
                     </div>
-                    <p class="menu-item-description">سمك طازج مشوي بالتوابل السقطرية وعصير الليمون</p>
-                    <span class="badge">طازج يومياً</span>
+                    <p class="menu-item-description" data-i18n="menu.item8.desc">سمك طازج مشوي بالتوابل السقطرية وعصير الليمون</p>
+                    <span class="badge" data-i18n="menu.badge.fresh">طازج يومياً</span>
                 </div>
 
                 <div class="menu-item" data-category="seafood">
                     <div class="menu-item-header">
-                        <h3>روبيان بالكاري السقطري</h3>
+                        <h3 data-i18n="menu.item9.name">روبيان بالكاري السقطري</h3>
                         <span class="price">€25</span>
                     </div>
-                    <p class="menu-item-description">روبيان طازج بصلصة الكاري السقطرية الغنية</p>
+                    <p class="menu-item-description" data-i18n="menu.item9.desc">روبيان طازج بصلصة الكاري السقطرية الغنية</p>
                 </div>
 
                 <div class="menu-item" data-category="seafood">
                     <div class="menu-item-header">
-                        <h3>صيادية سمك</h3>
+                        <h3 data-i18n="menu.item10.name">صيادية سمك</h3>
                         <span class="price">€22</span>
                     </div>
-                    <p class="menu-item-description">سمك مع أرز بصلصة الطماطم والبصل المكرمل</p>
+                    <p class="menu-item-description" data-i18n="menu.item10.desc">سمك مع أرز بصلصة الطماطم والبصل المكرمل</p>
                 </div>
 
                 <!-- Desserts -->
                 <div class="menu-item" data-category="desserts">
                     <div class="menu-item-header">
-                        <h3>معصوب بالعسل السقطري</h3>
+                        <h3 data-i18n="menu.item11.name">معصوب بالعسل السقطري</h3>
                         <span class="price">€10</span>
                     </div>
-                    <p class="menu-item-description">موز مهروس مع خبز وقشطة وعسل سقطري أصلي</p>
+                    <p class="menu-item-description" data-i18n="menu.item11.desc">موز مهروس مع خبز وقشطة وعسل سقطري أصلي</p>
                 </div>
 
                 <div class="menu-item" data-category="desserts">
                     <div class="menu-item-header">
-                        <h3>بنت الصحن</h3>
+                        <h3 data-i18n="menu.item12.name">بنت الصحن</h3>
                         <span class="price">€9</span>
                     </div>
-                    <p class="menu-item-description">حلوى يمنية تقليدية بالعسل والسمن البلدي</p>
+                    <p class="menu-item-description" data-i18n="menu.item12.desc">حلوى يمنية تقليدية بالعسل والسمن البلدي</p>
                 </div>
 
                 <div class="menu-item" data-category="desserts">
                     <div class="menu-item-header">
-                        <h3>كنافة بالقشطة</h3>
+                        <h3 data-i18n="menu.item13.name">كنافة بالقشطة</h3>
                         <span class="price">€11</span>
                     </div>
-                    <p class="menu-item-description">كنافة مقرمشة محشية بالقشطة وعسل النحل</p>
+                    <p class="menu-item-description" data-i18n="menu.item13.desc">كنافة مقرمشة محشية بالقشطة وعسل النحل</p>
                 </div>
 
                 <!-- Drinks -->
                 <div class="menu-item" data-category="drinks">
                     <div class="menu-item-header">
-                        <h3>قهوة يمنية</h3>
+                        <h3 data-i18n="menu.item14.name">قهوة يمنية</h3>
                         <span class="price">€5</span>
                     </div>
-                    <p class="menu-item-description">قهوة يمنية أصلية بنكهة الهيل</p>
+                    <p class="menu-item-description" data-i18n="menu.item14.desc">قهوة يمنية أصلية بنكهة الهيل</p>
                 </div>
 
                 <div class="menu-item" data-category="drinks">
                     <div class="menu-item-header">
-                        <h3>شاي بالحليب</h3>
+                        <h3 data-i18n="menu.item15.name">شاي بالحليب</h3>
                         <span class="price">€4</span>
                     </div>
-                    <p class="menu-item-description">شاي يمني بالحليب والهيل</p>
+                    <p class="menu-item-description" data-i18n="menu.item15.desc">شاي يمني بالحليب والهيل</p>
                 </div>
 
                 <div class="menu-item" data-category="drinks">
                     <div class="menu-item-header">
-                        <h3>عصير مانجو</h3>
+                        <h3 data-i18n="menu.item16.name">عصير مانجو</h3>
                         <span class="price">€6</span>
                     </div>
-                    <p class="menu-item-description">عصير مانجو طازج</p>
+                    <p class="menu-item-description" data-i18n="menu.item16.desc">عصير مانجو طازج</p>
                 </div>
 
                 <div class="menu-item" data-category="drinks">
                     <div class="menu-item-header">
-                        <h3>لبن سقطري</h3>
+                        <h3 data-i18n="menu.item17.name">لبن سقطري</h3>
                         <span class="price">€5</span>
                     </div>
-                    <p class="menu-item-description">لبن طبيعي بنكهة سقطرية خاصة</p>
+                    <p class="menu-item-description" data-i18n="menu.item17.desc">لبن طبيعي بنكهة سقطرية خاصة</p>
                 </div>
             </div>
         </div>
@@ -269,16 +274,16 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-header">
-                <h2>معرض الصور</h2>
+                <h2 data-i18n="gallery.heading">معرض الصور</h2>
                 <div class="divider"></div>
-                <p>استمتع بمشاهدة أشهى أطباقنا وأجواء مطعمنا المميزة</p>
+                <p data-i18n="gallery.subtitle">استمتع بمشاهدة أشهى أطباقنا وأجواء مطعمنا المميزة</p>
             </div>
 
             <div class="gallery-grid">
                 <div class="gallery-item" data-index="0">
                     <svg viewBox="0 0 300 300">
                         <rect width="300" height="300" fill="#8b4513"/>
-                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">مندي لحم</text>
+                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">Mandi</text>
                     </svg>
                     <div class="gallery-overlay">
                         <span class="gallery-icon">🔍</span>
@@ -287,7 +292,7 @@
                 <div class="gallery-item" data-index="1">
                     <svg viewBox="0 0 300 300">
                         <rect width="300" height="300" fill="#d2691e"/>
-                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">سمك مشوي</text>
+                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">Fish</text>
                     </svg>
                     <div class="gallery-overlay">
                         <span class="gallery-icon">🔍</span>
@@ -296,7 +301,7 @@
                 <div class="gallery-item" data-index="2">
                     <svg viewBox="0 0 300 300">
                         <rect width="300" height="300" fill="#cd853f"/>
-                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">أجواء المطعم</text>
+                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">Restaurant</text>
                     </svg>
                     <div class="gallery-overlay">
                         <span class="gallery-icon">🔍</span>
@@ -305,7 +310,7 @@
                 <div class="gallery-item" data-index="3">
                     <svg viewBox="0 0 300 300">
                         <rect width="300" height="300" fill="#daa520"/>
-                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">معصوب</text>
+                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">Masoub</text>
                     </svg>
                     <div class="gallery-overlay">
                         <span class="gallery-icon">🔍</span>
@@ -314,7 +319,7 @@
                 <div class="gallery-item" data-index="4">
                     <svg viewBox="0 0 300 300">
                         <rect width="300" height="300" fill="#b8860b"/>
-                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">سلطة سقطرية</text>
+                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">Salad</text>
                     </svg>
                     <div class="gallery-overlay">
                         <span class="gallery-icon">🔍</span>
@@ -323,7 +328,7 @@
                 <div class="gallery-item" data-index="5">
                     <svg viewBox="0 0 300 300">
                         <rect width="300" height="300" fill="#a0522d"/>
-                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">قهوة يمنية</text>
+                        <text x="50%" y="50%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cairo">Coffee</text>
                     </svg>
                     <div class="gallery-overlay">
                         <span class="gallery-icon">🔍</span>
@@ -337,46 +342,46 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>اتصل بنا</h2>
+                <h2 data-i18n="contact.heading">اتصل بنا</h2>
                 <div class="divider"></div>
-                <p>نسعد بخدمتكم - احجز طاولة أو تواصل معنا</p>
+                <p data-i18n="contact.subtitle">نسعد بخدمتكم - احجز طاولة أو تواصل معنا</p>
             </div>
 
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="info-card">
                         <div class="info-icon">📍</div>
-                        <h3>العنوان</h3>
-                        <p>123 شارع الشانزليزيه<br>باريس، فرنسا 75008</p>
+                        <h3 data-i18n="contact.address.title">العنوان</h3>
+                        <p data-i18n-html="contact.address.text">123 شارع الشانزليزيه<br>باريس، فرنسا 75008</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">📞</div>
-                        <h3>الهاتف</h3>
-                        <p>+33 1 23 45 67 89</p>
+                        <h3 data-i18n="contact.phone.title">الهاتف</h3>
+                        <p data-i18n="contact.phone.text">+33 1 23 45 67 89</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">⏰</div>
-                        <h3>ساعات العمل</h3>
-                        <p>الإثنين - الأحد<br>12:00 ظهراً - 11:00 مساءً</p>
+                        <h3 data-i18n="contact.hours.title">ساعات العمل</h3>
+                        <p data-i18n-html="contact.hours.text">الإثنين - الأحد<br>12:00 ظهراً - 11:00 مساءً</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">✉️</div>
-                        <h3>البريد الإلكتروني</h3>
-                        <p>info@soqotri-restaurant.fr</p>
+                        <h3 data-i18n="contact.email.title">البريد الإلكتروني</h3>
+                        <p data-i18n="contact.email.text">info@soqotri-restaurant.fr</p>
                     </div>
                 </div>
 
                 <div class="contact-form-container">
-                    <h3>احجز طاولة</h3>
+                    <h3 data-i18n="contact.form.title">احجز طاولة</h3>
                     <form id="contactForm" class="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="الاسم الكامل" required>
+                            <input type="text" id="name" name="name" data-i18n-placeholder="contact.form.name" placeholder="الاسم الكامل" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                            <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.email" placeholder="البريد الإلكتروني" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف" required>
+                            <input type="tel" id="phone" name="phone" data-i18n-placeholder="contact.form.phone" placeholder="رقم الهاتف" required>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -388,20 +393,20 @@
                         </div>
                         <div class="form-group">
                             <select id="guests" name="guests" required>
-                                <option value="">عدد الأشخاص</option>
-                                <option value="1">شخص واحد</option>
-                                <option value="2">شخصان</option>
-                                <option value="3">3 أشخاص</option>
-                                <option value="4">4 أشخاص</option>
-                                <option value="5">5 أشخاص</option>
-                                <option value="6">6 أشخاص</option>
-                                <option value="7+">أكثر من 6</option>
+                                <option value="" data-i18n="contact.form.guests.select">عدد الأشخاص</option>
+                                <option value="1" data-i18n="contact.form.guests.1">شخص واحد</option>
+                                <option value="2" data-i18n="contact.form.guests.2">شخصان</option>
+                                <option value="3" data-i18n="contact.form.guests.3">3 أشخاص</option>
+                                <option value="4" data-i18n="contact.form.guests.4">4 أشخاص</option>
+                                <option value="5" data-i18n="contact.form.guests.5">5 أشخاص</option>
+                                <option value="6" data-i18n="contact.form.guests.6">6 أشخاص</option>
+                                <option value="7+" data-i18n="contact.form.guests.7">أكثر من 6</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="4" placeholder="ملاحظات خاصة (اختياري)"></textarea>
+                            <textarea id="message" name="message" rows="4" data-i18n-placeholder="contact.form.message" placeholder="ملاحظات خاصة (اختياري)"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">إرسال الحجز</button>
+                        <button type="submit" class="btn btn-primary btn-submit" data-i18n="contact.form.submit">إرسال الحجز</button>
                     </form>
                     <div id="formMessage" class="form-message"></div>
                 </div>
@@ -414,8 +419,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>مطعم سقطري</h3>
-                    <p>نجلب لكم أصالة المطبخ السقطري واليمني في قلب العاصمة الفرنسية</p>
+                    <h3 data-i18n="nav.brand">مطعم سقطري</h3>
+                    <p data-i18n="footer.about">نجلب لكم أصالة المطبخ السقطري واليمني في قلب العاصمة الفرنسية</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook">📘</a>
                         <a href="#" class="social-link" aria-label="Instagram">📷</a>
@@ -423,26 +428,26 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>روابط سريعة</h4>
+                    <h4 data-i18n="footer.links">روابط سريعة</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#menu">القائمة</a></li>
-                        <li><a href="#gallery">معرض الصور</a></li>
-                        <li><a href="#contact">اتصل بنا</a></li>
+                        <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="#about" data-i18n="nav.about">من نحن</a></li>
+                        <li><a href="#menu" data-i18n="nav.menu">القائمة</a></li>
+                        <li><a href="#gallery" data-i18n="nav.gallery">معرض الصور</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">اتصل بنا</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>معلومات الاتصال</h4>
+                    <h4 data-i18n="footer.contact">معلومات الاتصال</h4>
                     <ul class="footer-links">
-                        <li>📍 123 شارع الشانزليزيه، باريس</li>
+                        <li>📍 123 Avenue des Champs-Élysées, Paris</li>
                         <li>📞 +33 1 23 45 67 89</li>
                         <li>✉️ info@soqotri-restaurant.fr</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 مطعم سقطري - جميع الحقوق محفوظة</p>
+                <p data-i18n="footer.copyright">&copy; 2025 مطعم سقطري - جميع الحقوق محفوظة</p>
             </div>
         </div>
     </footer>
@@ -457,6 +462,7 @@
         <button class="modal-nav modal-next">❯</button>
     </div>
 
+    <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

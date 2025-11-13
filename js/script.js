@@ -1,4 +1,102 @@
 // ======================
+// Language Switcher
+// ======================
+
+// Get current language from localStorage or default to Arabic
+let currentLang = localStorage.getItem('language') || 'ar';
+
+// Apply language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    setLanguage(currentLang);
+    updateActiveLanguageButton();
+});
+
+// Language switcher buttons
+const langButtons = document.querySelectorAll('.lang-btn');
+langButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        setLanguage(lang);
+        localStorage.setItem('language', lang);
+        updateActiveLanguageButton();
+    });
+});
+
+function setLanguage(lang) {
+    currentLang = lang;
+
+    // Update HTML lang and dir attributes
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+    // Update all translatable elements
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    // Update elements with HTML content (like <br> tags)
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+        const key = element.getAttribute('data-i18n-html');
+        if (translations[lang] && translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('placeholder', translations[lang][key]);
+        }
+    });
+
+    // Update document title
+    const titles = {
+        ar: 'مطعم سقطري - باريس',
+        fr: 'Restaurant Soqotri - Paris',
+        en: 'Soqotri Restaurant - Paris'
+    };
+    document.title = titles[lang];
+
+    // Update meta description
+    const descriptions = {
+        ar: 'مطعم سقطري - أصالة المطبخ اليمني السقطري في قلب باريس',
+        fr: 'Restaurant Soqotri - L\'authenticité de la cuisine yéménite soqotri au cœur de Paris',
+        en: 'Soqotri Restaurant - Authentic Yemeni Soqotri cuisine in the heart of Paris'
+    };
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        metaDescription.setAttribute('content', descriptions[lang]);
+    }
+
+    // Adjust modal position for RTL/LTR
+    const modalClose = document.querySelector('.modal-close');
+    if (modalClose) {
+        if (lang === 'ar') {
+            modalClose.style.left = '30px';
+            modalClose.style.right = 'auto';
+        } else {
+            modalClose.style.right = '30px';
+            modalClose.style.left = 'auto';
+        }
+    }
+}
+
+function updateActiveLanguageButton() {
+    langButtons.forEach(button => {
+        if (button.getAttribute('data-lang') === currentLang) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// ======================
 // Navigation
 // ======================
 
