@@ -4,11 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="مطعم سقطري - أصالة المطبخ اليمني السقطري في قلب باريس">
+    <meta name="keywords" content="مطعم يمني, مطعم عربي, Yemeni restaurant Paris, Arabic food, Socotra, Mandi, Zerbian, Saltah, restaurant yéménite">
+    <meta name="author" content="Soqotri Restaurant Paris">
+    <meta property="og:title" content="Soqotri Restaurant Paris - Authentic Yemeni Cuisine">
+    <meta property="og:description" content="Discover authentic Yemeni and Soqotri cuisine in the heart of Paris">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://socotraparis.com">
+    <meta property="og:image" content="https://socotraparis.com/images/og-image.jpg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>مطعم سقطري - باريس | Restaurant Soqotri Paris | Soqotri Restaurant Paris</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Soqotri Restaurant Paris",
+      "image": "https://socotraparis.com/images/restaurant.jpg",
+      "description": "Authentic Yemeni and Soqotri cuisine in Paris",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "15 Rue de la Huchette",
+        "addressLocality": "Paris",
+        "addressRegion": "Île-de-France",
+        "postalCode": "75005",
+        "addressCountry": "FR"
+      },
+      "telephone": "+33 1 43 54 89 67",
+      "email": "contact@socotraparis.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "servesCuisine": ["Yemeni", "Middle Eastern", "Halal"],
+      "priceRange": "€€",
+      "acceptsReservations": true
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -352,22 +392,26 @@
                     <div class="info-card">
                         <div class="info-icon">📍</div>
                         <h3 data-i18n="contact.address.title">العنوان</h3>
-                        <p data-i18n-html="contact.address.text">123 شارع الشانزليزيه<br>باريس، فرنسا 75008</p>
+                        <p data-i18n-html="contact.address.text">15 Rue de la Huchette<br>75005 Paris, France</p>
+                        <a href="https://maps.google.com/?q=15+Rue+de+la+Huchette+75005+Paris" target="_blank" class="info-link">🗺️ عرض على الخريطة</a>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">📞</div>
                         <h3 data-i18n="contact.phone.title">الهاتف</h3>
-                        <p data-i18n="contact.phone.text">+33 1 23 45 67 89</p>
+                        <p><a href="tel:+33143548967" class="info-link">+33 1 43 54 89 67</a></p>
+                        <a href="https://wa.me/33143548967" target="_blank" class="whatsapp-btn">
+                            <span class="wa-icon">💬</span> WhatsApp
+                        </a>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">⏰</div>
                         <h3 data-i18n="contact.hours.title">ساعات العمل</h3>
-                        <p data-i18n-html="contact.hours.text">الإثنين - الأحد<br>12:00 ظهراً - 11:00 مساءً</p>
+                        <p data-i18n-html="contact.hours.text">الإثنين - الأحد<br>12:00 - 23:00</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">✉️</div>
                         <h3 data-i18n="contact.email.title">البريد الإلكتروني</h3>
-                        <p data-i18n="contact.email.text">info@soqotri-restaurant.fr</p>
+                        <p><a href="mailto:contact@socotraparis.com" class="info-link">contact@socotraparis.com</a></p>
                     </div>
                 </div>
 
@@ -411,6 +455,22 @@
                     <div id="formMessage" class="form-message"></div>
                 </div>
             </div>
+
+            <!-- Google Maps -->
+            <div class="map-container">
+                <h3 class="map-title" data-i18n="contact.map.title">موقعنا على الخريطة</h3>
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.1857607779644!2d2.3422!3d48.8534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e1d4d9d3b1%3A0x3e0a0b8f8f8f8f8f!2s15%20Rue%20de%20la%20Huchette%2C%2075005%20Paris%2C%20France!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                        width="100%"
+                        height="400"
+                        style="border:0; border-radius: 15px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -440,9 +500,10 @@
                 <div class="footer-section">
                     <h4 data-i18n="footer.contact">معلومات الاتصال</h4>
                     <ul class="footer-links">
-                        <li>📍 123 Avenue des Champs-Élysées, Paris</li>
-                        <li>📞 +33 1 23 45 67 89</li>
-                        <li>✉️ info@soqotri-restaurant.fr</li>
+                        <li>📍 15 Rue de la Huchette, 75005 Paris</li>
+                        <li>📞 <a href="tel:+33143548967">+33 1 43 54 89 67</a></li>
+                        <li>✉️ <a href="mailto:contact@socotraparis.com">contact@socotraparis.com</a></li>
+                        <li>💬 <a href="https://wa.me/33143548967" target="_blank">WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
